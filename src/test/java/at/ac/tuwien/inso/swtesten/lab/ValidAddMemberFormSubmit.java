@@ -4,6 +4,7 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -96,12 +97,31 @@ public class ValidAddMemberFormSubmit {
 		}
 	}
 
+	@Test
 	public void hasUser(String arg1) {
 		// TODO Auto-generated method stub
 		// driver.findElement(By.id());
 		driver.get(baseUrl + "/admin.html#pages.member.list");
 		
-		String text = driver.findElement(By.cssSelector("table.dataTable")).getText();
+		String text = driver.findElement(By.cssSelector(".dataTable")).getText();
+		
+		
+		Assert.assertTrue(text.contains(arg1));
+
+//		driver.findElement(By.id("nav-members")).click();
+//		driver.findElement(By.id("nav-members-list")).click();
+//		driver.findElement(By.xpath("id('members-table')/x:tbody/x:tr/x:td[text()='" + arg1  + "']"));
+
+	}
+	
+	@Test
+	public void hasLocalOrg(String arg1) {
+		// TODO Auto-generated method stub
+		// driver.findElement(By.id());
+		driver.get(baseUrl + "/admin.html#pages.structure.localorg.list");
+		
+		String text = driver.findElement(By.cssSelector(".dataTable")).getText();
+		
 		
 		Assert.assertTrue(text.contains(arg1));
 
