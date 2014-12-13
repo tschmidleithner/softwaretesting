@@ -1,8 +1,6 @@
 Feature: invalid login
 
-Background:
-Given I am on the sportsid homepage
-
-Scenario: invalid login
-When login with invalid credentials
-Then i am on the error page
+Scenario: I am not able to login
+Given I am on the login homepage
+When I enter wrong credentials
+Then I am not forwared to another page
