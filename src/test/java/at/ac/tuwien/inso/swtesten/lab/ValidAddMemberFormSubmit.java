@@ -95,8 +95,9 @@ public class ValidAddMemberFormSubmit {
 	}
 
 	public void hasUser(String arg1) {
-		// TODO Auto-generated method stub
-		// driver.findElement(By.id());
+		driver.findElement(By.id("nav-members")).click();
+		driver.findElement(By.id("nav-members-list")).click();
+		driver.findElement(By.xpath("id('members-table')/x:tbody/x:tr/x:td[text()='" + arg1  + "']"));
 	}
 
 	public void createLocalOrganisation(String arg1) {
