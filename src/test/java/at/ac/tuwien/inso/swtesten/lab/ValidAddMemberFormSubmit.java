@@ -90,4 +90,9 @@ public class ValidAddMemberFormSubmit {
       acceptNextAlert = true;
     }
   }
+
+public void hasUser(String arg1) {
+	// TODO Auto-generated method stub
+	//driver.findElement(By.id());
+}
 }

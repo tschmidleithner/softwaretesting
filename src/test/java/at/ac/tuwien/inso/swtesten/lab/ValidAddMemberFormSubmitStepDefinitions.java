@@ -20,7 +20,7 @@ public class ValidAddMemberFormSubmitStepDefinitions {
 
 	@Then("^the list contains the new user \"([^\"]*)\"$")
 	public void the_list_contains_the_new_user(String arg1) throws Throwable {
-		
+		helper.hasUser(arg1);
 	}
 
 }
