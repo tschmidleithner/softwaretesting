@@ -9,7 +9,7 @@ public class ValidAddMemberFormSubmitStepDefinitions {
 	
 	@Given("^I am on the sportsid homepage$")
 	public void I_am_on_the_sportsid_homepage() throws Throwable {
-	    // Express the Regexp above with the code you wish you had
+		// Express the Regexp above with the code you wish you had
 		helper.setUp();
 	}
 	
