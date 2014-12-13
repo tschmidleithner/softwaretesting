@@ -104,6 +104,11 @@ public class ValidAddMemberFormSubmit {
 		String text = driver.findElement(By.cssSelector("table.dataTable")).getText();
 		
 		Assert.assertTrue(text.contains(arg1));
+
+//		driver.findElement(By.id("nav-members")).click();
+//		driver.findElement(By.id("nav-members-list")).click();
+//		driver.findElement(By.xpath("id('members-table')/x:tbody/x:tr/x:td[text()='" + arg1  + "']"));
+
 	}
 
 	public void createLocalOrganisation(String arg1) {
