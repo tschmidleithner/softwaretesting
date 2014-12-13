@@ -95,4 +95,19 @@ public void hasUser(String arg1) {
 	// TODO Auto-generated method stub
 	//driver.findElement(By.id());
 }
+
+public void createLocalOrganisation(String arg1) {
+	// TODO Auto-generated method stub
+	login();
+	
+	driver.findElement(By.id("nav-structure")).click();
+    driver.findElement(By.id("nav-structure-list-local")).click();
+    driver.findElement(By.cssSelector("span.button-content")).click();
+    
+    driver.findElement(By.id("group-name")).clear();
+    driver.findElement(By.id("group-name")).sendKeys(arg1);
+    
+    driver.findElement(By.cssSelector("#save-localorg > span.ui-button-text > span.button-content")).click();
+
+}
 }
