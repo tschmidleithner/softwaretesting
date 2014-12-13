@@ -24,6 +24,17 @@ public class ValidAddMemberFormSubmit {
 		baseUrl = "https://sportsid.risedev.at/";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+	
+	public void invalid_login() {
+		driver.get(baseUrl + "/#pages.login");
+		driver.findElement(By.id("input-username")).clear();
+		driver.findElement(By.id("input-username")).sendKeys("gruppea");
+		driver.findElement(By.id("input-password")).clear();
+		driver.findElement(By.id("input-password")).sendKeys("1234");
+		driver.findElement(By.id("login-button")).click();
+		
+		
+	}
 
 	public void login() {
 		driver.get(baseUrl + "/#pages.login");

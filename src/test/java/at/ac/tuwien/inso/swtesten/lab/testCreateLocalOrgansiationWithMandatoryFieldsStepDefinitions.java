@@ -23,5 +23,18 @@ public class testCreateLocalOrgansiationWithMandatoryFieldsStepDefinitions {
 	    // Express the Regexp above with the code you wish you had
 	  
 	}
+	
+	
+	
+	@When("^login with invalid credentials$")
+	public void login_with_invalid_credentials() throws Throwable {
+	    helper.invalid_login();
+	}
+
+	@Then("^i am on the error page$")
+	public void i_am_on_the_error_page() throws Throwable {
+	    helper.isLoginPage();
+	}
+
 }
 
