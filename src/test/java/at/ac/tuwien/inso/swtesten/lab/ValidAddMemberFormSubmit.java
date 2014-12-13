@@ -3,11 +3,13 @@ package at.ac.tuwien.inso.swtesten.lab;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 
+import cucumber.runtime.junit.Assertions;
 import at.ac.tuwien.inso.swtesten.util.SeleniumWebDriver;
 
 public class ValidAddMemberFormSubmit {
@@ -97,6 +99,11 @@ public class ValidAddMemberFormSubmit {
 	public void hasUser(String arg1) {
 		// TODO Auto-generated method stub
 		// driver.findElement(By.id());
+		driver.get(baseUrl + "/admin.html#pages.member.list");
+		
+		String text = driver.findElement(By.cssSelector("table.dataTable")).getText();
+		
+		Assert.assertTrue(text.contains(arg1));
 	}
 
 	public void createLocalOrganisation(String arg1) {
