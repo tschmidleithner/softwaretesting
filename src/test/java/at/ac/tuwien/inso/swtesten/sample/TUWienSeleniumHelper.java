@@ -31,11 +31,14 @@ public class TUWienSeleniumHelper {
 	}
 
 	public void assertDefinition() {
-		assertEquals("Masterstudium Software Engineering & Internet Computing", 
+		assertEquals("Masterstudium Software Engineering & Internet Computing",
 				driver.findElement(By.className("csc-firstHeader")).getText());
-		
-		assertEquals("Das Masterstudium Software Engineering & Internet Computing beschäftigt sich mit der Softwareentwicklung für verteilte Systeme, Mobile Computing sowie Internet Security und Electronic Payment als wesentliche informationstechnische Voraussetzung für einen virtuellen Wirtschaftsplatz Internet.",
-				driver.findElement(By.xpath("/html/body/div[5]/div/div[4]/div/div[2]/p[1]")).getText());
+
+		assertEquals(
+				"Das Masterstudium Software Engineering & Internet Computing beschäftigt sich mit der Softwareentwicklung für verteilte Systeme, Mobile Computing sowie Internet Security und Electronic Payment als wesentliche informationstechnische Voraussetzung für einen virtuellen Wirtschaftsplatz Internet.",
+				driver.findElement(
+						By.xpath("/html/body/div[5]/div/div[4]/div/div[2]/p[1]"))
+						.getText());
 	}
 
 }

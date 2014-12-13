@@ -1,6 +1,5 @@
 package at.ac.tuwien.inso.swtesten.sample;
 
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -8,9 +7,10 @@ import cucumber.api.java.en.When;
 public class TUWienStepDefinitions {
 
 	private TUWienSeleniumHelper tupage = new TUWienSeleniumHelper();
-	
+
 	@Given("^I want to look up the definition of the master courses at Vienna University of Technology$")
-	public void I_want_to_look_up_the_definition_of_the_master_courses_at_Vienna_University_of_Technology() throws Throwable {
+	public void I_want_to_look_up_the_definition_of_the_master_courses_at_Vienna_University_of_Technology()
+			throws Throwable {
 		tupage.setUp();
 	}
 

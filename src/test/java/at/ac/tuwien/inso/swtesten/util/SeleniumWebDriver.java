@@ -8,9 +8,9 @@ import org.openqa.selenium.remote.UnreachableBrowserException;
 public class SeleniumWebDriver {
 
 	private static WebDriver webdriver = new FirefoxDriver(new FirefoxProfile());
-	
+
 	static {
-		Runtime.getRuntime().addShutdownHook(new Thread(new BrowserCleanup()));	
+		Runtime.getRuntime().addShutdownHook(new Thread(new BrowserCleanup()));
 	}
 
 	public static WebDriver getCurrentDriver() {
@@ -27,7 +27,8 @@ public class SeleniumWebDriver {
 		try {
 			getCurrentDriver().quit();
 			webdriver = null;
-		} catch (UnreachableBrowserException e) {}
+		} catch (UnreachableBrowserException e) {
+		}
 	}
 
 }

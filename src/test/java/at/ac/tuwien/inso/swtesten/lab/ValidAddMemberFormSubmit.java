@@ -10,7 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 
-import cucumber.runtime.junit.Assertions;
 import at.ac.tuwien.inso.swtesten.util.SeleniumWebDriver;
 
 public class ValidAddMemberFormSubmit {
@@ -24,7 +23,7 @@ public class ValidAddMemberFormSubmit {
 		baseUrl = "https://sportsid.risedev.at/";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
-	
+
 	public void invalid_login() {
 		driver.get(baseUrl + "/#pages.login");
 		driver.findElement(By.id("input-username")).clear();
@@ -32,8 +31,7 @@ public class ValidAddMemberFormSubmit {
 		driver.findElement(By.id("input-password")).clear();
 		driver.findElement(By.id("input-password")).sendKeys("1234");
 		driver.findElement(By.id("login-button")).click();
-		
-		
+
 	}
 
 	public void login() {
@@ -113,32 +111,34 @@ public class ValidAddMemberFormSubmit {
 		// TODO Auto-generated method stub
 		// driver.findElement(By.id());
 		driver.get(baseUrl + "/admin.html#pages.member.list");
-		
-		String text = driver.findElement(By.cssSelector(".dataTable")).getText();
-		
-		
+
+		String text = driver.findElement(By.cssSelector(".dataTable"))
+				.getText();
+
 		Assert.assertTrue(text.contains(arg1));
 
-//		driver.findElement(By.id("nav-members")).click();
-//		driver.findElement(By.id("nav-members-list")).click();
-//		driver.findElement(By.xpath("id('members-table')/x:tbody/x:tr/x:td[text()='" + arg1  + "']"));
+		// driver.findElement(By.id("nav-members")).click();
+		// driver.findElement(By.id("nav-members-list")).click();
+		// driver.findElement(By.xpath("id('members-table')/x:tbody/x:tr/x:td[text()='"
+		// + arg1 + "']"));
 
 	}
-	
+
 	@Test
 	public void hasLocalOrg(String arg1) {
 		// TODO Auto-generated method stub
 		// driver.findElement(By.id());
 		driver.get(baseUrl + "/admin.html#pages.structure.localorg.list");
-		
-		String text = driver.findElement(By.cssSelector(".dataTable")).getText();
-		
-		
+
+		String text = driver.findElement(By.cssSelector(".dataTable"))
+				.getText();
+
 		Assert.assertTrue(text.contains(arg1));
 
-//		driver.findElement(By.id("nav-members")).click();
-//		driver.findElement(By.id("nav-members-list")).click();
-//		driver.findElement(By.xpath("id('members-table')/x:tbody/x:tr/x:td[text()='" + arg1  + "']"));
+		// driver.findElement(By.id("nav-members")).click();
+		// driver.findElement(By.id("nav-members-list")).click();
+		// driver.findElement(By.xpath("id('members-table')/x:tbody/x:tr/x:td[text()='"
+		// + arg1 + "']"));
 
 	}
 
@@ -162,7 +162,7 @@ public class ValidAddMemberFormSubmit {
 	public void isLoginPage() {
 		// TODO Auto-generated method stub
 		String title = driver.getTitle();
-		
+
 		Assert.assertTrue(acceptNextAlert);
 	}
 }
