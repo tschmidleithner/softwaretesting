@@ -158,4 +158,11 @@ public class ValidAddMemberFormSubmit {
 				.click();
 
 	}
+
+	public void isLoginPage() {
+		// TODO Auto-generated method stub
+		String title = driver.getTitle();
+		
+		Assert.assertTrue(acceptNextAlert);
+	}
 }
